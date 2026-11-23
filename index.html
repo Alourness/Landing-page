@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sollux Lighting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <a class="logo" href="#" aria-label="Sollux">
+      <img src="logo.png" alt="Sollux">
+    </a>
+
+    <nav class="navigation" aria-label="Główna nawigacja">
+      <button class="nav-link has-arrow" type="button">Lampy <span class="arrow" aria-hidden="true"></span></button>
+      <button class="nav-link has-arrow" type="button">Kolory <span class="arrow" aria-hidden="true"></span></button>
+      <button class="nav-link has-arrow" type="button">Pomieszczenia <span class="arrow" aria-hidden="true"></span></button>
+      <a class="nav-link" href="#news">Nowości</a>
+      <a class="nav-link" href="#bestsellers">Bestsellery</a>
+      <a class="nav-link" href="#promotions">Promocje</a>
+    </nav>
+
+    <button class="menu-button" type="button" aria-label="Otwórz menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Prezentacja kolekcji">
+      <div class="hero-slide active" style="background-image: url('HERO Baner (1).png')"></div>
+      <div class="hero-slide union" style="background-image: url('Union.png')"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Nowa kolekcja 2026</p>
+        <h1>Światło,<br>które tworzy klimat</h1>
+        <a class="hero-button" href="#bestsellers">Zobacz kolekcję</a>
+      </div>
+
+      <div class="slider-controls" aria-label="Wybrane slajdy">
+        <button class="slider-dot active" type="button" aria-label="Slajd pierwszy"></button>
+        <button class="slider-dot" type="button" aria-label="Slajd drugi"></button>
+      </div>
+    </section>
+
+    <section class="collection" id="bestsellers">
+      <div class="section-heading">
+        <p>Nasze wybory</p>
+        <h2>Bestsellery</h2>
+      </div>
+
+      <div class="products">
+        <article class="product-card">
+          <div class="product-image"><img src="lampa1.png" alt="Beżowa lampa plisowana"></div>
+          <div class="product-info"><h3>Ridge Mini</h3><span>289 zł</span></div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="lampa2.png" alt="Czarna lampa ścienna"></div>
+          <div class="product-info"><h3>Wall Fold</h3><span>359 zł</span></div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="lampa3.png" alt="Terakotowa lampa plisowana"></div>
+          <div class="product-info"><h3>Ridge Terra</h3><span>289 zł</span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
