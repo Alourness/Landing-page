@@ -4,26 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sollux Lighting</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hero.css">
 </head>
 <body>
   <header class="header" id="header">
-    <a class="logo" href="#" aria-label="Sollux">
-      <img src="logo.png" alt="Sollux">
-    </a>
+    <a class="logo" href="#" aria-label="Sollux"><img src="logo.png" alt="Sollux"></a>
 
     <nav class="navigation" aria-label="Główna nawigacja">
-      <button class="nav-link has-arrow" type="button">Lampy <span class="arrow" aria-hidden="true"></span></button>
-      <button class="nav-link has-arrow" type="button">Kolory <span class="arrow" aria-hidden="true"></span></button>
-      <button class="nav-link has-arrow" type="button">Pomieszczenia <span class="arrow" aria-hidden="true"></span></button>
-      <a class="nav-link" href="#news">Nowości</a>
-      <a class="nav-link" href="#bestsellers">Bestsellery</a>
-      <a class="nav-link" href="#promotions">Promocje</a>
+      <button class="nav-link has-arrow" type="button">Lampy <span class="arrow"></span></button>
+      <button class="nav-link has-arrow" type="button">Kolory <span class="arrow"></span></button>
+      <button class="nav-link has-arrow" type="button">Pomieszczenia <span class="arrow"></span></button>
+      <a class="nav-link" href="#">Nowości</a>
+      <a class="nav-link" href="#">Bestsellery</a>
+      <a class="nav-link" href="#">Promocje</a>
     </nav>
 
-    <button class="menu-button" type="button" aria-label="Otwórz menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
+    <div class="header-tools">
+      <button class="search" type="button" aria-label="Szukaj">
+        <span>Czego szukasz?</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 5 5"></path></svg>
+      </button>
+      <button class="custom-lamp" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"></path><path d="M3 7v10l9 5 9-5V7M12 12v10"></path></svg>
+        <span>Stwórz swoją lampę</span>
+      </button>
+      <button class="icon-button profile" type="button" aria-label="Profil">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21c1-5 3.7-7 7.5-7s6.5 2 7.5 7"></path></svg>
+      </button>
+      <button class="icon-button cart" type="button" aria-label="Koszyk">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.5 11h10l3-8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+      </button>
+    </div>
+
+    <button class="menu-button" type="button" aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <main>
@@ -32,36 +45,32 @@
       <div class="hero-slide union" style="background-image: url('Union.png')"></div>
 
       <div class="hero-content">
-        <p class="eyebrow">Nowa kolekcja 2026</p>
-        <h1>Światło,<br>które tworzy klimat</h1>
-        <a class="hero-button" href="#bestsellers">Zobacz kolekcję</a>
+        <p class="eyebrow">Bestsellery SOLLUX</p>
+        <h1>Kolor i forma<br>w nowym świetle</h1>
+        <a class="hero-button" href="#">Sprawdź bestsellery</a>
       </div>
+
+      <div class="lamp-composition" aria-label="Prezentowane lampy">
+        <div class="lamp lamp-one"><img src="lampa1.png" alt="Lampa Ridge Mini"></div>
+        <div class="lamp lamp-two"><img src="lampa2.png" alt="Lampa Wall Fold"></div>
+        <div class="lamp lamp-three"><img src="lampa3.png" alt="Lampa Ridge Terra"></div>
+      </div>
+
+      <button class="slide-arrow arrow-left" type="button" aria-label="Poprzedni slajd">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"></path></svg>
+      </button>
+      <button class="slide-arrow arrow-right" type="button" aria-label="Następny slajd">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg>
+      </button>
 
       <div class="slider-controls" aria-label="Wybrane slajdy">
         <button class="slider-dot active" type="button" aria-label="Slajd pierwszy"></button>
         <button class="slider-dot" type="button" aria-label="Slajd drugi"></button>
       </div>
-    </section>
 
-    <section class="collection" id="bestsellers">
-      <div class="section-heading">
-        <p>Nasze wybory</p>
-        <h2>Bestsellery</h2>
-      </div>
-
-      <div class="products">
-        <article class="product-card">
-          <div class="product-image"><img src="lampa1.png" alt="Beżowa lampa plisowana"></div>
-          <div class="product-info"><h3>Ridge Mini</h3><span>289 zł</span></div>
-        </article>
-        <article class="product-card">
-          <div class="product-image"><img src="lampa2.png" alt="Czarna lampa ścienna"></div>
-          <div class="product-info"><h3>Wall Fold</h3><span>359 zł</span></div>
-        </article>
-        <article class="product-card">
-          <div class="product-image"><img src="lampa3.png" alt="Terakotowa lampa plisowana"></div>
-          <div class="product-info"><h3>Ridge Terra</h3><span>289 zł</span></div>
-        </article>
+      <div class="rating">
+        <div class="rating-score"><strong>4.8</strong><img src="Frame 12.png" alt="Gwiazda"></div>
+        <span>Uwielbiany przez klientów</span>
       </div>
     </section>
   </main>
