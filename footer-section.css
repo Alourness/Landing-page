@@ -165,21 +165,6 @@
   margin-bottom: 0;
 }
 
-.footer-logo-badge {
-  min-height: 34px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 10px;
-  border: 1px solid #d6d6d1;
-  border-radius: 6px;
-  background: #edede8;
-  color: #777;
-  font-size: 11px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
 /* Флаги стран: sv.png, ang.png, fr.png, ger.png, hisp.png, nd.png, pl.png, rm.png */
 .footer-store-flags {
   display: flex;

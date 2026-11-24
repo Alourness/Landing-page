@@ -253,7 +253,5 @@
 
 .catalog-block,
 .smart-block {
-  grid-area: auto;
   width: auto;
-  justify-self: stretch;
 }

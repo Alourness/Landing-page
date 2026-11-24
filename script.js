@@ -17,8 +17,8 @@ function showSlide(index) {
   currentSlide = index;
 }
 
-leftArrow.addEventListener('click', () => showSlide(currentSlide - 1));
-rightArrow.addEventListener('click', () => showSlide(currentSlide + 1));
+if (leftArrow) leftArrow.addEventListener('click', () => showSlide(currentSlide - 1));
+if (rightArrow) rightArrow.addEventListener('click', () => showSlide(currentSlide + 1));
 dots.forEach((dot, index) => dot.addEventListener('click', () => showSlide(index)));
 
 setInterval(() => showSlide(currentSlide + 1), 3000);
