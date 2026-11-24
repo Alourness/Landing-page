@@ -33,42 +33,68 @@
   filter: brightness(0);
 }
 
+/* SOCIAL ICONS — EXACT MATCH TO 3RD IMAGE */
 .footer-socials {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 26px;
 }
 
 .footer-social {
+  position: relative;
   width: 24px;
   height: 24px;
+  padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 0;
   border-radius: 0;
   background: transparent;
-  color: #111;
+  color: #181818;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
-.footer-social:first-child {
-  border-radius: 4px;
-  background: #111;
-  color: #fff;
+.footer-social:hover {
+  opacity: 0.72;
 }
 
-.footer-social svg {
-  width: 24px;
-  height: 24px;
-  fill: #111;
-  stroke: #111;
-  stroke-width: 1.5;
+/* Скрываем старое содержимое внутри .footer-social, чтобы не накладывалось */
+.footer-social > svg,
+.footer-social > img {
+  display: none;
 }
 
-.footer-social:first-child svg {
-  width: 24px;
-  height: 24px;
-  fill: #fff;
-  stroke: none;
+.footer-social::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* 1. Facebook: тёмный скруглённый квадрат с белой 'f' */
+.footer-social:nth-child(1)::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='2' width='20' height='20' rx='3.2' fill='%23181818'/%3E%3Cpath fill='%23ffffff' d='M13.6 22v-8.1h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.7V4.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.8v3.2h2.8V22h3z'/%3E%3C/svg%3E");
+}
+
+/* 2. Instagram: контурная камера с кругом и точкой */
+.footer-social:nth-child(2)::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect x='3.2' y='3.2' width='17.6' height='17.6' rx='5' stroke='%23181818' stroke-width='2.1'/%3E%3Ccircle cx='12' cy='12' r='4.1' stroke='%23181818' stroke-width='2.1'/%3E%3Ccircle cx='17.3' cy='6.7' r='1.25' fill='%23181818'/%3E%3C/svg%3E");
+}
+
+/* 3. TikTok: тёмная нота TikTok */
+.footer-social:nth-child(3)::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23181818' d='M16.6 3c.4 1.8 1.5 3.1 3.4 3.5v2.9c-1.3 0-2.5-.4-3.4-1.1v6.2c0 3.4-2.8 6-6.2 6S4.2 17.9 4.2 14.5c0-3.3 2.6-6 5.9-6.2v3c-1.6.2-2.9 1.5-2.9 3.2 0 1.8 1.4 3.2 3.2 3.2 1.9 0 3.3-1.4 3.3-3.4V3h2.9z'/%3E%3C/svg%3E");
+}
+
+/* 4. YouTube: тёмный скруглённый прямоугольник с белым треугольником */
+.footer-social:nth-child(4)::before {
+  width: 25px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'%3E%3Crect x='1' y='1' width='26' height='18' rx='4.5' fill='%23181818'/%3E%3Cpolygon points='11.2,6 18.2,10 11.2,14' fill='%23ffffff'/%3E%3C/svg%3E");
 }
 
 .footer-column h3 {
@@ -147,38 +173,42 @@
   padding: 6px 10px;
   border: 1px solid #d6d6d1;
   border-radius: 6px;
-  background: #ededE8;
+  background: #edede8;
   color: #777;
   font-size: 11px;
   font-weight: 700;
   white-space: nowrap;
 }
 
+/* Флаги стран: sv.png, ang.png, fr.png, ger.png, hisp.png, nd.png, pl.png, rm.png */
 .footer-store-flags {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 10px;
   flex-wrap: nowrap;
 }
 
 .footer-store-flag {
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(0, 0, 0, .08);
+  position: relative;
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  background: #ddd;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .08);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
   overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.flag-pl { background: linear-gradient(180deg,#fff 0 50%,#dc143c 50%); }
-.flag-de { background: linear-gradient(180deg,#111 0 33%,#dd0000 33% 66%,#ffce00 66%); }
-.flag-es { background: linear-gradient(180deg,#aa151b 0 25%,#f1bf00 25% 75%,#aa151b 75%); }
-.flag-ro { background: linear-gradient(90deg,#00319c 0 33%,#fcd116 33% 66%,#ce1126 66%); }
-.flag-fr { background: linear-gradient(90deg,#0055a4 0 33%,#fff 33% 66%,#ef4135 66%); }
-.flag-gb { background: linear-gradient(90deg,transparent 44%,#cf142b 44% 56%,transparent 56%),linear-gradient(0deg,transparent 44%,#cf142b 44% 56%,transparent 56%),#233e96; }
-.flag-nl { background: linear-gradient(180deg,#ae1c28 0 33%,#fff 33% 66%,#21468b 66%); }
-.flag-se { background: linear-gradient(90deg,#006aa7 0 38%,#fecc00 38% 48%,#006aa7 48%),linear-gradient(180deg,#006aa7 0 100%); }
+.footer-store-flag img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
 
 /* STAGE 3: LEGAL + BADGES */
 .footer-bottom {
@@ -215,26 +245,38 @@
 }
 
 .footer-credit {
-  min-height: 38px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 12px;
-  border-radius: 5px;
+  width: 118px;
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+  padding: 7px 10px;
+  border-radius: 6px;
   background: #262626;
   color: #fff;
-  font-size: 11px;
   white-space: nowrap;
 }
 
-.payment-badge {
-  min-height: 30px;
-  border: 1px solid #d2d2cc;
-  border-radius: 4px;
-  background: #fff;
-  color: #333;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: -0.2px;
+.footer-credit-top {
+  font-size: 8px;
+  line-height: 1;
+  opacity: .72;
+}
+
+.footer-credit-main {
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.footer-accent {
+  color: #C7FC70;
+}
+
+.footer-sell-accent {
+  color: #1AAC7A;
 }
 
 .footer-awards-row {
@@ -249,7 +291,7 @@
   height: 44px;
   object-fit: contain;
   filter: grayscale(1);
-  opacity: .78;
+  opacity: 0.78;
 }
 
 .footer-payment-row,
@@ -301,6 +343,7 @@
   .footer-top {
     grid-template-columns: 1fr;
     gap: 32px;
+    padding-left: 0;
   }
 
   .footer-column:nth-last-child(-n + 2) {
@@ -331,5 +374,6 @@
 
   .footer-legal-details {
     flex-direction: column;
+    white-space: normal;
   }
 }
