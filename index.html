@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sollux Lighting</title>
-  <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet" href="hero-section.css">
+  <link rel="stylesheet" href="middle-section.css">
+  <link rel="stylesheet" href="gradient-section.css">
 </head>
 <body>
   <header class="header" id="header">
@@ -73,8 +75,47 @@
         <span>Uwielbiany przez klientów</span>
       </div>
     </section>
+
+    <section class="middle" aria-label="Kolekcje">
+      <div class="category-strip">
+        <article class="category-card"><img src="enter.png" alt="Zwroty"><div><strong>Zwroty nawet do 100 dni</strong><span>szybkie i proste</span></div></article>
+        <article class="category-card"><img src="bookmark-full.png" alt="Gwarancja"><div><strong>5 lat gwarancji</strong><span>na wszystkie produkty</span></div></article>
+        <article class="category-card"><img src="truck.png" alt="Dostawa"><div><strong>Darmowa dostawa</strong><span>już za 299 zł</span></div></article>
+        <article class="category-card"><img src="Custom Icons.png" alt="Produkty polskie"><div><strong>Polskie produkty</strong><span>sprawdzona jakość</span></div></article>
+        <article class="category-card"><img src="trophy.png" alt="Sklep producenta"><div><strong>Oficjalny sklep producenta</strong><span>gwarancja satysfakcji</span></div></article>
+      </div>
+
+      <div class="collection-grid">
+        <article class="collection-card collection-small thoro-card">
+          <div class="card-copy"><span>Marka</span><h3>THORO</h3><p>Poznaj lampy premium</p><a href="#">Odwiedź sklep THORO</a></div>
+          <img src="THORO.png" alt="Marka THORO">
+        </article>
+        <article class="collection-card collection-large configurator-card">
+          <img src="Phone.png" alt="Konfigurator 3D">
+          <div class="card-copy"><span>Konfigurator 3D</span><h3>Wybierz projekt i dostosuj<br>go do swojego wnętrza</h3><a href="#">Stwórz swój projekt</a></div>
+        </article>
+        <article class="collection-card collection-large catalog-card">
+          <img src="Phone (1).png" alt="Katalog SOLLUX">
+          <div class="card-copy"><span>Katalog</span><h3>Odkryj najnowszy katalog</h3><a href="#">Sprawdź katalog</a></div>
+        </article>
+        <article class="collection-card collection-small smart-card">
+          <img src="Phone (2).png" alt="SOLLUX SMART">
+          <div class="card-copy"><span>SOLLUX SMART</span><h3>Przymierz lampę w aplikacji</h3><a href="#">Pobierz aplikacje na telefon</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="gradient-section" aria-label="Promocja SOLLUX">
+      <canvas id="gradient-canvas" aria-hidden="true"></canvas>
+      <div class="gradient-copy">
+        <h2>Twoje wnętrze zasługuje na wyjątkowe światło</h2>
+        <a href="#">Kup teraz</a>
+        <p>Od 119 zł na oficjalnej stronie producenta SOLLUX</p>
+      </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
+  <script src="gradient-section.js"></script>
 </body>
 </html>

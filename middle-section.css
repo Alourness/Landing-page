@@ -1,0 +1,28 @@
+.middle { height: 100vh; min-height: 680px; margin: 0 0 50px; box-sizing: border-box; position: relative; z-index: 1; }
+.category-strip { height: 15%; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; margin-bottom: 64px; }
+.category-card { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; }
+.category-card img { width: 32px; height: 32px; object-fit: contain; }
+.category-card div { display: flex; flex-direction: column; gap: 4px; }
+.category-card strong { font-size: 15px; line-height: 1.2; }
+.category-card span { color: #777; font-size: 12px; }
+.collection-grid { height: calc(85% - 24px); display: grid; grid-template-columns: 35% 65%; grid-template-rows: repeat(2, minmax(320px, 1fr)); gap: 24px; }
+.collection-card { position: relative; overflow: hidden; border-radius: 18px; }
+.collection-card img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.collection-grid .collection-card:nth-child(1) { grid-area: 1 / 1; }
+.collection-grid .collection-card:nth-child(2) { grid-area: 1 / 2; }
+.collection-grid .collection-card:nth-child(3) { grid-area: 2 / 1 / 3 / 3; width: 65%; }
+.collection-grid .collection-card:nth-child(4) { grid-area: 2 / 1 / 3 / 3; width: 35%; justify-self: end; }
+.card-copy { position: absolute; z-index: 2; left: 10%; bottom: 28px; display: flex; flex-direction: column; align-items: flex-start; color: #fff; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.28); }
+.card-copy span { font-size: 13px; }
+.card-copy h3 { margin: 8px 0 18px; max-width: 420px; font-family: Arial, Helvetica, sans-serif; font-size: clamp(24px, 2.2vw, 38px); line-height: 1.05; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-clamp: 2; }
+.thoro-card { background: #ece8df; }
+.thoro-card img { object-position: right center; }
+.thoro-card .card-copy span { margin-bottom: -4px; font-size: 12px; }
+.thoro-card .card-copy h3 { margin: 0 0 10px; font-size: clamp(38px, 4vw, 64px); }
+.configurator-card { background: #72A3F3; }
+.configurator-card img { width: 42%; margin-left: auto; object-position: right center; }
+.configurator-card .card-copy { left: 10%; width: 48%; }
+.catalog-card { background: #f0eee9; }
+.catalog-card img { width: 58%; margin-left: auto; object-position: right center; }
+.catalog-card .card-copy { width: 38%; }
+.smart-card { background: #72A3F3; }
